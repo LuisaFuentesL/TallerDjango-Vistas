@@ -34,7 +34,60 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Retrieve measurements",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}{{api_path}}/measurements",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}{{api_path}}",
+							"path": [
+								"measurements"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 14 Feb 2022 00:44:34 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "796"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"model\": \"measurements.measurement\",\n        \"pk\": 1,\n        \"fields\": {\n            \"variable\": 1,\n            \"value\": 50,\n            \"unit\": \"C\",\n            \"place\": \"Bta\",\n            \"dateTime\": \"2022-02-13T14:51:55.621Z\"\n        }\n    },\n    {\n        \"model\": \"measurements.measurement\",\n        \"pk\": 5,\n        \"fields\": {\n            \"variable\": 7,\n            \"value\": 10,\n            \"unit\": \"P\",\n            \"place\": \"Bta\",\n            \"dateTime\": \"2022-02-14T00:18:05.927Z\"\n        }\n    },\n    {\n        \"model\": \"measurements.measurement\",\n        \"pk\": 7,\n        \"fields\": {\n            \"variable\": 6,\n            \"value\": 77,\n            \"unit\": \"D\",\n            \"place\": \"Sta\",\n            \"dateTime\": \"2022-02-14T00:31:41.736Z\"\n        }\n    },\n    {\n        \"model\": \"measurements.measurement\",\n        \"pk\": 10,\n        \"fields\": {\n            \"variable\": 6,\n            \"value\": 77,\n            \"unit\": \"D\",\n            \"place\": \"Sta\",\n            \"dateTime\": \"2022-02-14T00:41:32.949Z\"\n        }\n    },\n    {\n        \"model\": \"measurements.measurement\",\n        \"pk\": 6,\n        \"fields\": {\n            \"variable\": 6,\n            \"value\": 56,\n            \"unit\": \"U\",\n            \"place\": \"Nro\",\n            \"dateTime\": \"2022-02-14T00:20:17.226Z\"\n        }\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "Retrieve measurement",
@@ -72,7 +125,67 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Retrieve measurement",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}{{api_path}}/measurements/?id=6",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}{{api_path}}",
+							"path": [
+								"measurements",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 14 Feb 2022 00:45:17 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "159"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"model\": \"measurements.measurement\",\n        \"pk\": 6,\n        \"fields\": {\n            \"variable\": 6,\n            \"value\": 56,\n            \"unit\": \"U\",\n            \"place\": \"Nro\",\n            \"dateTime\": \"2022-02-14T00:20:17.226Z\"\n        }\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "Create measurement",
@@ -113,7 +226,70 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Create measurement",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"variable\":6,\r\n    \"value\": 77.0,\r\n    \"unit\": \"D\",\r\n    \"place\": \"Sta\",\r\n    \"date\": \"2021-02-13T14:42:15.222Z\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}{{api_path}}/measurements/",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}{{api_path}}",
+							"path": [
+								"measurements",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 14 Feb 2022 00:41:32 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "160"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"model\": \"measurements.measurement\",\n        \"pk\": 10,\n        \"fields\": {\n            \"variable\": 6,\n            \"value\": 77,\n            \"unit\": \"D\",\n            \"place\": \"Sta\",\n            \"dateTime\": \"2022-02-14T00:41:32.949Z\"\n        }\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "Update measurement",
@@ -154,7 +330,70 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Update measurement",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"variable\":6,\r\n    \"value\": 56.0,\r\n    \"unit\": \"U\",\r\n    \"place\": \"Nro\",\r\n    \"date\": \"2022-02-13T14:52:15.262Z\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}{{api_path}}/measurements/6",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}{{api_path}}",
+							"path": [
+								"measurements",
+								"6"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 14 Feb 2022 00:42:04 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "159"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"model\": \"measurements.measurement\",\n        \"pk\": 6,\n        \"fields\": {\n            \"variable\": 6,\n            \"value\": 56,\n            \"unit\": \"U\",\n            \"place\": \"Nro\",\n            \"dateTime\": \"2022-02-14T00:20:17.226Z\"\n        }\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "Delete measurement",
@@ -190,7 +429,65 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Delete measurement",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}{{api_path}}/measurements/4",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}{{api_path}}",
+							"path": [
+								"measurements",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 14 Feb 2022 00:44:02 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "162"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"model\": \"measurements.measurement\",\n        \"pk\": null,\n        \"fields\": {\n            \"variable\": 4,\n            \"value\": 45,\n            \"unit\": \"C\",\n            \"place\": \"Ppy\",\n            \"dateTime\": \"2022-02-14T00:17:29.610Z\"\n        }\n    }\n]"
+				}
+			]
 		}
 	]
 }
